@@ -1,0 +1,61 @@
+# Ignore arquivos compilados
+*.class
+
+# Diretórios do Maven/Gradle
+target/
+!.mvn/wrapper/maven-wrapper.jar
+.mvn/
+.gradle/
+
+# Logs e dados temporários
+*.log
+logs/
+nohup.out
+
+# Configurações locais
+application-*.yml
+application-*.properties
+.env
+
+# Arquivos do IntelliJ IDEA e Eclipse
+.idea/
+*.iml
+*.ipr
+*.iws
+
+# Arquivos do VS Code
+.vscode/
+
+# Diretórios do sistema operacional
+.DS_Store
+Thumbs.db
+
+# Dependências baixadas
+**/node_modules/
+**/bower_components/
+
+# Arquivos do Docker
+.dockerignore
+docker-compose.override.yml
+
+# Arquivos do Kubernetes
+k8s/
+
+# Arquivos do Terraform
+.terraform/
+terraform.tfstate*
+
+# Arquivos de build do Spring Boot
+BOOT-INF/
+META-INF/
+org/
+
+# Chaves e credenciais
+*.pem
+*.p12
+*.jks
+secrets/
+
+# Outros
+*.swp
+*.swo
