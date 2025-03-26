@@ -1,5 +1,7 @@
 package meu.curso.microservicos.pedido.model;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
+
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -20,6 +22,7 @@ public class ItemPedido {
     // JoinColumn -> fazendo a ligação entre as tabelas
     @ManyToOne
     @JoinColumn(name = "pedido_id")
+    @JsonBackReference
     private Pedido pedido;
 
     public Long getId() {

@@ -2,6 +2,8 @@ package meu.curso.microservicos.pedido.model;
 
 import java.util.List;
 
+import com.fasterxml.jackson.annotation.JsonManagedReference;
+
 import jakarta.persistence.CascadeType;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -21,6 +23,7 @@ public class Pedido {
     // mappedBy -> mapeado pela coluna "pedido" 
     // cascade -> operações em cascata do relacionamento entre as tabelas
     @OneToMany(mappedBy = "pedido", cascade = CascadeType.ALL)
+    @JsonManagedReference
     private List<ItemPedido> itens;
 
     public Long getId() {
