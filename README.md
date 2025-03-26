@@ -6,3 +6,4 @@
 * PostgreSQL
 * RabbitMQ
 * Docker
+* CloudAMQP
