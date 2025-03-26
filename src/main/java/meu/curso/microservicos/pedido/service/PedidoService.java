@@ -1,5 +1,7 @@
 package meu.curso.microservicos.pedido.service;
 
+import java.util.List;
+
 import org.springframework.stereotype.Service;
 
 import meu.curso.microservicos.pedido.model.ItemPedido;
@@ -31,5 +33,10 @@ public class PedidoService {
         // Salvando o pedido no banco de dados
         return pedidoRepository.save(pedido);   
     }
-    
+
+    // Retornar lista de pedidos
+    public List<Pedido> listarPedidos() {
+        return pedidoRepository.findAll();
+    }
+
 }
